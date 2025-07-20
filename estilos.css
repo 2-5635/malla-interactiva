@@ -1,53 +1,55 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f4ff;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
   margin: 0;
   padding: 20px;
   text-align: center;
+  color: #003366;
 }
 
 h1 {
-  color: #003366;
-  margin-bottom: 30px;
+  color: #004080;
+  margin-bottom: 20px;
 }
 
 #malla {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .curso {
-  padding: 15px;
-  border: 2px solid #0077cc;
-  border-radius: 12px;
-  background-color: #ffffff;
+  padding: 12px;
+  border: 2px solid #007acc;
+  border-radius: 10px;
+  background: white;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  transition: background 0.2s, transform 0.1s;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.curso:hover {
-  background-color: #e6f2ff;
+.curso:hover:not(.bloqueado) {
+  background: #d6eaff;
+  transform: translateY(-2px);
 }
 
-.curso.aprobado {
-  background-color: #d1ffd1;
-  text-decoration: line-through;
-  border-color: #3cb371;
-}
-
-.curso.bloqueado {
-  background-color: #f0f0f0;
-  color: #888;
-  border-color: #ccc;
+.bloqueado {
+  background-color: #ddd;
+  border-color: #aaa;
+  color: #666;
   cursor: not-allowed;
 }
 
-.curso[grupo] {
-  border-style: dashed;
+.aprobado {
+  background-color: #b3e6b3;
+  border-color: #339933;
+  text-decoration: line-through;
+  color: #033d03;
 }
 
 
