@@ -1,15 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular Interactiva</title>
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <h1>Malla Curricular de Ingeniería Informática</h1>
-  <div id="malla"></div>
-  <script src="script.js"></script>
-</body>
-</html>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4ff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #003366;
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curso {
+  padding: 15px;
+  border: 2px solid #0077cc;
+  border-radius: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.curso:hover {
+  background-color: #e6f2ff;
+}
+
+.curso.aprobado {
+  background-color: #d1ffd1;
+  text-decoration: line-through;
+  border-color: #3cb371;
+}
+
+.curso.bloqueado {
+  background-color: #f0f0f0;
+  color: #888;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.curso[grupo] {
+  border-style: dashed;
+}
+
 
