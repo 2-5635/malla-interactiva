@@ -1,55 +1,46 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  color: #003366;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
 }
 
 h1 {
-  color: #004080;
-  margin-bottom: 20px;
+    text-align: center;
 }
 
-#malla {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-  max-width: 1200px;
-  margin: auto;
+.semester {
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e7f1ff;
 }
 
-.curso {
-  padding: 12px;
-  border: 2px solid #007acc;
-  border-radius: 10px;
-  background: white;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h2 {
+    text-align: center;
+    color: #007bff;
 }
 
-.curso:hover:not(.bloqueado) {
-  background: #d6eaff;
-  transform: translateY(-2px);
+.subject {
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.bloqueado {
-  background-color: #ddd;
-  border-color: #aaa;
-  color: #666;
-  cursor: not-allowed;
+.subject.approved {
+    background-color: #28a745;
 }
 
-.aprobado {
-  background-color: #b3e6b3;
-  border-color: #339933;
-  text-decoration: line-through;
-  color: #033d03;
+.subject:hover {
+    background-color: #0056b3;
 }
-
-
